@@ -31,23 +31,6 @@ A professional, industrial-grade pipeline builder built with **ReactFlow**, **Fa
 
 ![architecture](./arch.png)
 
-## 📂 Project Structure
-
-```bash
-vectorShift/
-├── backend/
-│   ├── main.py          # FastAPI server with DAG validation
-│   └── test_dag.py      # Automated tests for graph logic
-└── client/
-    ├── src/
-    │   ├── nodes/       # Custom ReactFlow node components
-    │   ├── components/  # Shared UI components (DeletableEdge, etc.)
-    │   ├── store.jsx    # Zustand state management
-    │   ├── ui.jsx       # Main ReactFlow playground
-    │   └── toolbar.jsx  # Categorized node toolbar
-    └── App.css          # Global industrial theme variables
-```
-
 ## 🚦 Getting Started
 
 ### Backend
@@ -73,7 +56,7 @@ vectorShift/
    ```
 3. Start the development server:
    ```bash
-   npm run dev
+   npm start
    ```
 
 ## 🧪 Testing
@@ -86,5 +69,3 @@ python3 test_dag.py
 ```
 
 ---
-
-_Designed with precision for advanced agentic workflows._
