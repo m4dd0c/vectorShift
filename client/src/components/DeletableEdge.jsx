@@ -1,5 +1,5 @@
 import { BaseEdge, EdgeLabelRenderer, getSmoothStepPath } from "reactflow";
-import { useStore } from "../store";
+import { useStore } from "../lib/store";
 import { X } from "lucide-react";
 
 export default function DeletableEdge({

@@ -13,7 +13,7 @@ const ConditionalContent = ({ data }) => {
         <select
           value={operator}
           onChange={(e) => setOperator(e.target.value)}
-          className="mt-1 block w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+          className="nodrag mt-1 block w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
         >
           <option value=">">Greater Than</option>
           <option value="<">Less Than</option>
@@ -27,7 +27,7 @@ const ConditionalContent = ({ data }) => {
           type="text"
           value={threshold}
           onChange={(e) => setThreshold(e.target.value)}
-          className="mt-1 block w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+          className="nodrag mt-1 block w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
         />
       </label>
     </div>

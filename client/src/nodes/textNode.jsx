@@ -103,7 +103,7 @@ export const TextNode = ({ id, data }) => {
             value={currText}
             onChange={handleTextChange}
             placeholder="Enter text with {{variables}}..."
-            className="mt-1 block w-full px-3 py-2 text-xs border border-border-industrial rounded-md bg-white text-text-primary focus:border-text-secondary focus:outline-none transition-all resize-none overflow-hidden font-mono leading-relaxed"
+            className="nodrag mt-1 block w-full px-3 py-2 text-xs border border-border-industrial rounded-md bg-white text-text-primary focus:border-text-secondary focus:outline-none transition-all resize-none overflow-hidden font-mono leading-relaxed"
             rows={1}
           />
         </label>

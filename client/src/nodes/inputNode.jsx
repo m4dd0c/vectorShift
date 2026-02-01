@@ -16,7 +16,7 @@ const InputContent = ({ id, data }) => {
           type="text"
           value={currName}
           onChange={(e) => setCurrName(e.target.value)}
-          className="mt-1 block w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+          className="nodrag mt-1 block w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
         />
       </label>
       <label className="block">
@@ -24,7 +24,7 @@ const InputContent = ({ id, data }) => {
         <select
           value={inputType}
           onChange={(e) => setInputType(e.target.value)}
-          className="mt-1 block w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+          className="nodrag mt-1 block w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
         >
           <option value="Text">Text</option>
           <option value="File">File</option>

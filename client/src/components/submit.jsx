@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion } from "motion/react";
-import { useStore } from "./store";
+import { useStore } from "../lib/store";
 import { shallow } from "zustand/shallow";
 import { CheckCircle2, AlertTriangle, X, Terminal } from "lucide-react";
 

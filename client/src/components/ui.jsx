@@ -1,19 +1,19 @@
 import { useState, useRef, useCallback } from "react";
 import ReactFlow, { Controls, Background, MiniMap } from "reactflow";
-import { useStore } from "./store";
+import { useStore } from "../lib/store";
 import { shallow } from "zustand/shallow";
-import { InputNode } from "./nodes/inputNode";
-import { LLMNode } from "./nodes/llmNode";
-import { OutputNode } from "./nodes/outputNode";
-import { TextNode } from "./nodes/textNode";
-import { FilterNode } from "./nodes/filterNode";
-import { TransformNode } from "./nodes/transformNode";
-import { APINode } from "./nodes/apiNode";
-import { ConditionalNode } from "./nodes/conditionalNode";
-import { AggregatorNode } from "./nodes/aggregatorNode";
+import { InputNode } from "../nodes/inputNode";
+import { LLMNode } from "../nodes/llmNode";
+import { OutputNode } from "../nodes/outputNode";
+import { TextNode } from "../nodes/textNode";
+import { FilterNode } from "../nodes/filterNode";
+import { TransformNode } from "../nodes/transformNode";
+import { APINode } from "../nodes/apiNode";
+import { ConditionalNode } from "../nodes/conditionalNode";
+import { AggregatorNode } from "../nodes/aggregatorNode";
 
 import { useSubmit, ResultModal } from "./submit";
-import DeletableEdge from "./components/DeletableEdge";
+import DeletableEdge from "./DeletableEdge";
 import { motion, AnimatePresence } from "motion/react";
 import { Play } from "lucide-react";
 import "reactflow/dist/style.css";
@@ -44,6 +44,7 @@ const selector = (state) => ({
   onNodesChange: state.onNodesChange,
   onEdgesChange: state.onEdgesChange,
   onConnect: state.onConnect,
+  removeEdge: state.removeEdge,
 });
 
 export const PipelineUI = () => {
@@ -57,6 +58,7 @@ export const PipelineUI = () => {
     onNodesChange,
     onEdgesChange,
     onConnect,
+    removeEdge,
   } = useStore(selector, shallow);
 
   const { handleSubmit, loading, result, showModal, setShowModal } =
@@ -117,6 +119,7 @@ export const PipelineUI = () => {
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
+        onEdgeDoubleClick={(_, edge) => removeEdge(edge.id)}
         onDrop={onDrop}
         onDragOver={onDragOver}
         onInit={setReactFlowInstance}

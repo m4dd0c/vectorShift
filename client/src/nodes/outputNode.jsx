@@ -16,7 +16,7 @@ const OutputContent = ({ id, data }) => {
           type="text"
           value={currName}
           onChange={(e) => setCurrName(e.target.value)}
-          className="mt-1 block w-full px-2 py-1.5 text-xs border border-border-industrial rounded-md bg-white text-text-primary focus:border-text-secondary focus:outline-none transition-all font-mono"
+          className="nodrag mt-1 block w-full px-2 py-1.5 text-xs border border-border-industrial rounded-md bg-white text-text-primary focus:border-text-secondary focus:outline-none transition-all font-mono"
         />
       </label>
       <label className="block">
@@ -24,7 +24,7 @@ const OutputContent = ({ id, data }) => {
         <select
           value={outputType}
           onChange={(e) => setOutputType(e.target.value)}
-          className="mt-1 block w-full px-2 py-1.5 text-xs border border-border-industrial rounded-md bg-white text-text-primary focus:border-text-secondary focus:outline-none transition-all font-mono"
+          className="nodrag mt-1 block w-full px-2 py-1.5 text-xs border border-border-industrial rounded-md bg-white text-text-primary focus:border-text-secondary focus:outline-none transition-all font-mono"
         >
           <option value="Text">Text</option>
           <option value="File">Image</option>

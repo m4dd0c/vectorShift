@@ -13,7 +13,7 @@ const FilterContent = ({ data }) => {
         <select
           value={condition}
           onChange={(e) => setCondition(e.target.value)}
-          className="mt-1 block w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+          className="nodrag mt-1 block w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
         >
           <option value="contains">Contains</option>
           <option value="equals">Equals</option>
@@ -27,7 +27,7 @@ const FilterContent = ({ data }) => {
           type="text"
           value={value}
           onChange={(e) => setValue(e.target.value)}
-          className="mt-1 block w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+          className="nodrag mt-1 block w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
         />
       </label>
     </div>

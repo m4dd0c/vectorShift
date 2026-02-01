@@ -1,7 +1,7 @@
 import { Handle, Position } from "reactflow";
 import { motion } from "motion/react";
 import { X } from "lucide-react";
-import { useStore } from "../store";
+import { useStore } from "../lib/store";
 
 /**
  * BaseNode - A configurable node component with modern styling
