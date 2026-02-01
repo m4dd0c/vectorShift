@@ -29,17 +29,7 @@ A professional, industrial-grade pipeline builder built with **ReactFlow**, **Fa
 
 ## 🏗 System Flow
 
-```mermaid
-graph TD
-    A[Toolbar] -->|Drag & Drop| B(ReactFlow Canvas)
-    B -->|State Update| C{Zustand Store}
-    C -->|Nodes & Edges| B
-    B -->|Run Pipeline| D[Frontend API Call]
-    D -->|POST /pipelines/parse| E[FastAPI Backend]
-    E -->|Validation Logic| F{DAG Check}
-    F -->|Result| D
-    D -->|Display Modal| G[Result Modal]
-```
+![architecture](./arch.png)
 
 ## 📂 Project Structure
 
