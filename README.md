@@ -20,6 +20,27 @@ A professional, industrial-grade pipeline builder built with **ReactFlow**, **Fa
   - **Keyboard Shortcuts**: `Cmd/Ctrl + Enter` to run the analysis instantly.
 - **Responsive Layout**: Designed for high-precision workflow editing.
 
+## 🧩 Node Reference
+
+### 📥 I/O Nodes
+
+- **Input Node**: The entry point for your pipeline. Configure a field name and select the data type (Text or File).
+- **Output Node**: The exit point for your pipeline. Specify a name and output type (Text or Image).
+- **Text Node**: A versatile text area for static or dynamic content.
+  - **Auto-Variable Detection**: Typing `{{variable_name}}` automatically creates a new input handle on the left side, allowing you to inject dynamic data into your text.
+
+### ⚙️ Logic Nodes
+
+- **Filter Node**: Filters incoming data based on string patterns (Contains, Equals, Starts With, Ends With).
+- **Conditional Node**: A logic gate that routes data to `True` or `False` outputs based on comparison operators (`>`, `<`, `===`, `!==`) and a defined threshold.
+- **Aggregator Node**: Collects and merges multiple inputs into a single data stream for downstream processing.
+
+### 🛠 Tools Nodes
+
+- **LLM Node**: Connects your pipeline to a Large Language Model. Features dedicated handles for `System` (instructions) and `Prompt` (user query).
+- **Transform Node**: A generic data transformation node used for custom processing logic.
+- **API Node**: Enables your pipeline to interact with external services via standard web requests.
+
 ## 🛠 Tech Stack
 
 - **Frontend**: React (Vite), ReactFlow, Zustand, Framer Motion, Tailwind CSS, Lucide Icons.
