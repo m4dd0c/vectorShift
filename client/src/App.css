@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-dark: #fafafa; /* Zinc 50 */
+  --color-bg-card: #ffffff; /* White */
+  --color-bg-panel: #f4f4f5; /* Zinc 100 */
+  --color-border-industrial: #e4e4e7; /* Zinc 200 */
+  --color-text-primary: #18181b; /* Zinc 900 */
+  --color-text-secondary: #71717a; /* Zinc 500 */
+  --color-accent-industrial: #a1a1aa; /* Zinc 400 */
+
+  --font-family-industrial: "Inter", system-ui, -apple-system, sans-serif;
+  --font-family-mono: "JetBrains Mono", "Fira Code", monospace;
+}
+
+body {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-industrial);
+}
+
+/* Scrollbar styling for industrial look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-industrial);
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-secondary);
+}

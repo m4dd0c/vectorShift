@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { createNode } from "./BaseNode";
+import { FileOutput } from "lucide-react";
 
 const OutputContent = ({ id, data }) => {
   const [currName, setCurrName] = useState(
@@ -8,33 +9,34 @@ const OutputContent = ({ id, data }) => {
   const [outputType, setOutputType] = useState(data?.outputType || "Text");
 
   return (
-    <>
-      <label style={{ display: "block", marginBottom: "5px" }}>
-        Name:
+    <div className="space-y-3">
+      <label className="block">
+        <span className="text-xs font-medium text-text-secondary">Name:</span>
         <input
           type="text"
           value={currName}
           onChange={(e) => setCurrName(e.target.value)}
-          style={{ width: "100%", marginTop: "2px" }}
+          className="mt-1 block w-full px-2 py-1.5 text-xs border border-border-industrial rounded-md bg-white text-text-primary focus:border-text-secondary focus:outline-none transition-all font-mono"
         />
       </label>
-      <label style={{ display: "block" }}>
-        Type:
+      <label className="block">
+        <span className="text-xs font-medium text-text-secondary">Type:</span>
         <select
           value={outputType}
           onChange={(e) => setOutputType(e.target.value)}
-          style={{ width: "100%", marginTop: "2px" }}
+          className="mt-1 block w-full px-2 py-1.5 text-xs border border-border-industrial rounded-md bg-white text-text-primary focus:border-text-secondary focus:outline-none transition-all font-mono"
         >
           <option value="Text">Text</option>
           <option value="File">Image</option>
         </select>
       </label>
-    </>
+    </div>
   );
 };
 
 export const OutputNode = createNode({
   title: "Output",
-  inputs: [{ id: "value" }],
+  icon: <FileOutput size={16} />,
+  inputs: [{ id: "value", label: "Artifact" }],
   content: OutputContent,
 });
