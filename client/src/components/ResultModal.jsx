@@ -2,7 +2,6 @@ import { useEffect } from "react";
 
 export const ResultModal = ({ result, onClose }) => {
   useEffect(() => {
-    // Close modal on Escape key
     const handleEscape = (e) => {
       if (e.key === "Escape") onClose();
     };
@@ -42,7 +41,6 @@ export const ResultModal = ({ result, onClose }) => {
         }}
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Header */}
         <div style={{ marginBottom: "24px" }}>
           <h2
             style={{
@@ -56,7 +54,6 @@ export const ResultModal = ({ result, onClose }) => {
           </h2>
         </div>
 
-        {/* Results */}
         <div style={{ marginBottom: "24px" }}>
           <div
             style={{
@@ -118,7 +115,6 @@ export const ResultModal = ({ result, onClose }) => {
           </div>
         </div>
 
-        {/* Message */}
         <div
           style={{
             padding: "16px",
@@ -135,7 +131,6 @@ export const ResultModal = ({ result, onClose }) => {
           </p>
         </div>
 
-        {/* Close Button */}
         <div style={{ textAlign: "right" }}>
           <button
             onClick={onClose}
