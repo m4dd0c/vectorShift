@@ -15,7 +15,6 @@ A professional, industrial-grade pipeline builder built with **ReactFlow**, **Fa
   - **Tools**: LLM integration, API calls, and Data Transforms.
 - **Smart Validation**: Real-time DAG (Directed Acyclic Graph) detection using Kahn's algorithm on the backend.
 - **Interactive Design**:
-  - **Industrial Light Theme**: Clean, crisp UI inspired by modern developer tools.
   - **Deletion Support**: Intuitive "X" buttons on both nodes and edges.
   - **Keyboard Shortcuts**: `Cmd/Ctrl + Enter` to run the analysis instantly.
 - **Responsive Layout**: Designed for high-precision workflow editing.
